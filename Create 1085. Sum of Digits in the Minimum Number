@@ -1,0 +1,12 @@
+Given an integer array nums, return 0 if the sum of the digits of the minimum integer in nums is odd, or 1 otherwise.
+
+
+minimum = min(nums)
+string = str(minimum)
+
+digitSum = 0
+for digit in string:
+    digitSum += int(digit)
+    if digitSum % 2 == 0:
+        return 1
+return 0
