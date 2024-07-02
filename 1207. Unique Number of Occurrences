@@ -1,0 +1,8 @@
+Given an array of integers arr, return true if the number of occurrences of each value in the array is unique or false otherwise.
+
+
+isUnique = True
+for i in weight:
+    if weight.count(i) != 1:
+        isUnique = False
+print(isUnique)
