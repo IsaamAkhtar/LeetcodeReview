@@ -1,0 +1,9 @@
+Given an integer number n, return the difference between the product of its digits and the sum of its digits.
+
+digitList = [int(digit) for digit in str(n)]
+
+nProduct = 1
+for digit in digitList:
+    nProduct *= digit
+nSum = sum(digitList)
+return nProduct - nSum
