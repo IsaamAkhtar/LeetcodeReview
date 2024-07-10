@@ -15,3 +15,14 @@ Output: "255[.]100[.]50[.]0"
 def defangIPaddr(self, address: str) -> str:
         defangedAddress = address.replace(".", "[.]")
         return defangedAddress
+
+Alternate Solution:
+
+def defangIPaddr(address: str) -> str:
+    defangedAddress = []
+    for char in address:
+        if char == '.':
+            defangedAddress.append('[.]')
+        else:
+            defangedAddress.append(char)
+    return ''.join(defangedAddress)
