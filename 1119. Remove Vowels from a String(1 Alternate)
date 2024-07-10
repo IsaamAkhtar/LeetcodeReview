@@ -13,3 +13,14 @@ Output: ""
 myList = [char for char in s if char not in ['a', 'e', 'i', 'o', 'u']]
 answer = ''.join(myList)
 return answer
+
+Alternate Solution:
+
+def removeVowels(s: str) -> str:
+    vowels = set('aeiou')  
+    result = []  
+    for char in s:
+        if char not in vowels:  
+            result.append(char)  
+    return ''.join(result) 
+
