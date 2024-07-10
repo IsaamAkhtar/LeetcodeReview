@@ -6,7 +6,6 @@ You are given an integer array heights representing the current order that the s
 Return the number of indices where heights[i] != expected[i].
 
 
-class Solution(object):
     def heightChecker(self, heights):
         differences = 0
         sortedHeights = sorted(heights)
@@ -14,3 +13,9 @@ class Solution(object):
             if heights[i] != sortedHeights[i]:
                 differences += 1
         return differences
+
+Alternate Solution:
+
+def heightChecker(self, heights: List[int]) -> int:
+        expected = sorted(heights)
+        return sum(1 for i, height in enumerate(heights) if height != expected[i])
